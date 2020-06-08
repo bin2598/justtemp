@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<body>
+Multilication Table of : <input type="number" id="n">
+<p onclick="mul()" onmouseover="mult()" onmouseleave="type()">Multiplication Table</p>
+<p id="l"></p>
+<br><hr>
+
+<p>Array = ('bibin','Baby','Jolly','jubin')</p>
+<p onclick="arr()">print the elements of array</p>
+<p id="arr"></p><hr>
+
+<p onclick="ob()">Object = [a:'bibin',b:'jubin',3:'chinnu']</p>
+<p id="ob"></p>
+
+<script>
+/*ar = ""
+    for (i=1;i<=10;i++){
+        ar += "<b>"+i+"</b><br>"
+        document.getElementById("l").innerText=ar
+        document.getElementById("l").innerText=ar   //this 2 lines shows the main difference b/w innerText & innerHTML
+        }*/
+
+function mul(){
+                n = document.getElementById("n").value
+                nums = [1,2,3,4,5,6,7,8,9,10]
+                res=""
+                for (i of nums){
+                                res += i+" X "+n+" = "+ i*n +"<br>"
+                                }
+                document.getElementById("l").innerHTML = res;
+              }
+function mult(){
+                n = document.getElementById("n").value
+                res=""
+                for (i=1;i<11;i++){
+                                res += i+" X "+n+" = "+i*n+"<br>"
+                                }
+                document.getElementById("l").innerHTML = res;
+                }
+function arr(){
+                arr = ['bibin','Baby','Jolly','jubin']
+                re ="";
+                for(i of arr){
+                            re += i+"<br>";
+
+                            }
+                document.getElementById("arr").innerHTML = re;
+               }
+function ob(){
+                ob = {'a':'bibin','b':'jubin',4:'Chinnu'}
+                res = ""
+                for(i in ob){
+                            res += i+"<br>"
+                            }
+                   document.getElementById("ob").innerHTML = res;
+                }
+</script>
+
+</body>
+</html>
